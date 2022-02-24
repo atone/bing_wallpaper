@@ -39,7 +39,7 @@ def download_today_image():
                 with open(file_name, 'wb') as out_file:
                     shutil.copyfileobj(r.raw, out_file)
                 print('done', file=sys.stderr)
-        
+
 
 if __name__ == '__main__':
     download_today_image()
