@@ -4,7 +4,7 @@ import shutil
 import sys
 import os
 
-image_folder_path = '/Users/{}/Pictures/bing-wallpapers'.format(os.environ['USER'])
+image_folder_path = '/Users/{}/Library/MobileDocuments/com~apple~CloudDocs/Wallpapers'.format(os.environ['USER'])
 daily_image_api_url = 'https://bingwallpaper.microsoft.com/api/BWC/getHPImages?screenWidth=3840&screenHeight=2160&env=live'
 
 
@@ -18,7 +18,7 @@ def get_image_config():
 
 def download_today_image():
     if not os.path.exists(image_folder_path):
-        print('bing-wallpapers folder does not exist, creating one', file=sys.stderr)
+        print('wallpapers folder does not exist, creating one', file=sys.stderr)
         os.makedirs(image_folder_path)
     print('downloading config...', end='', file=sys.stderr)
     image_list = get_image_config()
